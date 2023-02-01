@@ -1,11 +1,20 @@
 .App {
     --header_height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .hw {
-
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
 .hwTitle {
-
+    text-align: center ;
+    font-size: 20px;
+    font-weight: 60;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 3px solid #f1f0f0;
+    border-bottom-style: dashed;
 }
