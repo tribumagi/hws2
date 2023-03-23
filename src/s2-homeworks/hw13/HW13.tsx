@@ -38,7 +38,7 @@ const [disabled, setDisabled] = useState(false)
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                setText('Гуд')
+                setText('...всё ок)')
                 setInfo('Все норм. ГАЗУЕМ!')
 
             })
@@ -52,7 +52,7 @@ const [disabled, setDisabled] = useState(false)
                 if (e.response.status === 500) {
                     setImage(error500)
                     setCode('Ошибка 500!')
-                    setText('имитация ошибки на сервере')
+                    setText('эмитация ошибки на сервере')
                     setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
                 }
                 if (e.code === "ERR_NETWORK") {
