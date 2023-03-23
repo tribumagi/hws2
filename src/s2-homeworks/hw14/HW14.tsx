@@ -12,10 +12,13 @@ import {useSearchParams} from 'react-router-dom'
 * 4 - сделать стили в соответствии с дизайном
 * 5 - добавить HW14 в HW5/pages/JuniorPlus
 * */
+type DataResponseType = {
+    data: {techs: string[]}
+}
 
 const getTechs = (find: string) => {
     return axios
-        .get<{ techs: string[] }>(
+        .get<string, DataResponseType>(
             'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test2',
             {params: {find}}
         )
@@ -35,9 +38,11 @@ const HW14 = () => {
         getTechs(value)
             .then((res) => {
                 // делает студент
-
+                if (res?.data) {
+                    setTechs(res.data.techs)
+                }
                 // сохранить пришедшие данные
-
+                setLoading(false)
                 //
             })
     }
@@ -45,7 +50,7 @@ const HW14 = () => {
     const onChangeText = (value: string) => {
         setFind(value)
         // делает студент
-
+        setSearchParams({find: value})
         // добавить/заменить значение в квери урла
         // setSearchParams(
 
