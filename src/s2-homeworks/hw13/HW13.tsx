@@ -39,7 +39,7 @@ const [disabled, setDisabled] = useState(false)
                 setCode('Код 200!')
                 setImage(success200)
                 setText('...всё ок)')
-                setInfo('Все норм. ГАЗУЕМ!')
+                setInfo('код 200 - обычно означает что скорее всего всё ок)')
 
             })
             .catch((e) => {
